@@ -27,4 +27,24 @@ public class TestCheckStrongPassword {
     public void checkStrongPasswordTest5() {
         Assert.assertFalse(CheckString.isStrongPassword("Ab1Avc2"));
     }
+    @Test
+    public void checkStrongPasswordTest6() {
+        Assert.assertFalse(CheckString.isStrongPassword("StrongPassword"));
+    }
+    @Test
+    public void checkStrongPasswordTest7() {
+        Assert.assertFalse(CheckString.isStrongPassword("123456789"));
+    }
+    @Test
+    public void checkStrongPasswordTest8() {
+        Assert.assertTrue(CheckString.isStrongPassword("WeWe1234"));
+    }
+    @Test
+    public void checkStrongPasswordTest9() {
+        Assert.assertTrue(CheckString.isStrongPassword("1muVcjkEfy"));
+    }
+    @Test
+    public void checkStrongPasswordTest10() {
+        Assert.assertTrue(CheckString.isStrongPassword("uS9bP3ey7XMWgUa6HZ0R2vlP"));
+    }
 }
